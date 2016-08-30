@@ -40,9 +40,14 @@ $(document).ready(function(){
 
 		question1:function(){
 
+			$(".question,.answer1,.answer2,.answer3,.answer4").off("click");
 
 			trivia.countdown();
 			question = 1;
+			wins = 0,
+			lose = 0,
+			clock = 15,
+			timeouts = 0;
 
 			$("#timerW, #timerL, #timerOT, .startB, .startOver, .correct").hide();
 			$("#timer,.question, .answer1, .answer2, .answer3, .answer4").show();
@@ -51,7 +56,7 @@ $(document).ready(function(){
 			$("#timer").html("<h2>15 Seconds Remaining</h2>");
 
 
-			$(".question").html("QUESTION ONE TEXT");
+			$(".question").html("QUESTION 1 of 10: TEXT");
 
 			$(".answer1").html("Q1 Answer 1");
 
@@ -61,11 +66,15 @@ $(document).ready(function(){
 			$(".answer3").on("click",trivia.win);
 
 			$(".answer4").html("Q1 Answer 4");
+
+			$(".answer1, .answer2, .answer4").on("click",trivia.wrongChoice);
 			
 			},/*end of question1*/
 		
 		
 		question2:function(){
+
+			$(".question,.answer1,.answer2,.answer3,.answer4").off("click");
 
 			$("#timer").html("<h2>15 Seconds Remaining</h2>")
 			$("#timerW, #timerL, #timerOT").hide();
@@ -73,9 +82,6 @@ $(document).ready(function(){
 			
 			this.countdown();
 			 
-			 $(".answer3").off("click");
-
-
 			$(".question").html("QUESTION TWO TEXT");
 
 
@@ -89,6 +95,8 @@ $(document).ready(function(){
 			$(".answer4").html("Q2 Answer 4***");
 			$(".answer4").on("click", this.win);
 
+			$(".answer1, .answer2, .answer3").on("click",trivia.wrongChoice);
+
 			},/*endo of quesiton 3*/
 
 		question3:function(){
@@ -100,7 +108,7 @@ $(document).ready(function(){
 
 			this.countdown();
 
-			$(".answer4").off("click");
+			$(".question,.answer1,.answer2,.answer3,.answer4").off("click");
 
 			
 			$(".question").html("QUESTION THREE TEXT");
@@ -116,6 +124,7 @@ $(document).ready(function(){
 
 			$(".answer4").html("Q3 Answer 4");
 			
+			$(".answer3, .answer2, .answer4").on("click",trivia.wrongChoice);
 			
 			},/*End of Question3*/
 
@@ -130,7 +139,7 @@ $(document).ready(function(){
 			this.countdown();
 
 
-			$(".answer1").off("click");
+			$(".question,.answer1,.answer2,.answer3,.answer4").off("click");
 
 		
 
@@ -146,7 +155,8 @@ $(document).ready(function(){
 			$(".answer3").on("click", this.win);
 
 			$(".answer4").html("Q4 Answer 4");
-			// console.log(trivia);
+			
+			$(".answer1, .answer2, .answer4").on("click",trivia.wrongChoice);
 
 			},/*End of question4*/
 		
@@ -161,7 +171,7 @@ $(document).ready(function(){
 			this.countdown();
 
 
-			$(".answer3").off("click");
+			$(".question,.answer1,.answer2,.answer3,.answer4").off("click");
 
 			
 
@@ -179,6 +189,8 @@ $(document).ready(function(){
 
 			$(".answer4").html("Q5 Answer 4");
 
+			$(".answer1, .answer3, .answer4").on("click",trivia.wrongChoice);
+
 			},/*End of question5*/
 
 		question6:function(){
@@ -191,7 +203,7 @@ $(document).ready(function(){
 			this.countdown();
 
 
-			$(".answer2").off("click");
+			$(".question,.answer1,.answer2,.answer3,.answer4").off("click");
 
 			
 
@@ -210,6 +222,8 @@ $(document).ready(function(){
 			$(".answer4").html("Q6 Answer 4**");
 			$(".answer4").on("click", this.win);
 
+			$(".answer1, .answer2, .answer3").on("click",trivia.wrongChoice);
+
 			},/*End of question6*/
 
 		question7:function(){
@@ -222,7 +236,7 @@ $(document).ready(function(){
 			this.countdown();
 
 
-			$(".answer4").off("click");
+			$(".question,.answer1,.answer2,.answer3,.answer4").off("click");
 
 			
 
@@ -239,7 +253,9 @@ $(document).ready(function(){
 		
 
 			$(".answer4").html("Q7 Answer 4**");
-			$(".answer4").on("click", this.win);	
+			$(".answer4").on("click", this.win);
+
+			$(".answer1, .answer2, .answer3").on("click",trivia.wrongChoice);	
 
 			},/*End of question7*/
 
@@ -254,7 +270,7 @@ $(document).ready(function(){
 			this.countdown();
 
 
-			$(".answer4").off("click");
+			$(".question,.answer1,.answer2,.answer3,.answer4").off("click");
 
 
 
@@ -271,6 +287,8 @@ $(document).ready(function(){
 		
 
 			$(".answer4").html("Q8 Answer 4");
+
+			$(".answer1, .answer3, .answer4").on("click",trivia.wrongChoice);
 			
 
 			},/*END OF QUESTION 8*/
@@ -286,8 +304,7 @@ $(document).ready(function(){
 			this.countdown();
 
 
-			$(".answer2").off("click");
-
+			$(".question,.answer1,.answer2,.answer3,.answer4").off("click");
 			
 
 			$(".question").html("QUESTION NINE TEXT");
@@ -304,6 +321,8 @@ $(document).ready(function(){
 
 			$(".answer4").html("Q9 Answer 4");
 
+			$(".answer3, .answer2, .answer4").on("click",trivia.wrongChoice);
+
 			},/*END OF QUESITON 9*/
 
 
@@ -317,7 +336,7 @@ $(document).ready(function(){
 			this.countdown();
 
 
-			$(".answer1").off("click");
+			$(".question,.answer1,.answer2,.answer3,.answer4").off("click");
 
 
 			$(".question").html("QUESTION TEN TEXT");
@@ -335,12 +354,15 @@ $(document).ready(function(){
 			$(".answer4").html("Q10 Answer 4**");
 			$(".answer4").on("click", this.win);
 
+			$(".answer1, .answer2, .answer3").on("click",trivia.wrongChoice);
+
 			},/*End of question 10*/
 
 
 		scores:function(){
 
 				clearInterval(counter);
+				$(".question,.answer1,.answer2,.answer3,.answer4").off("click");
 				
 				$(".question").hide();
 				$(".answer1").hide();
@@ -351,7 +373,7 @@ $(document).ready(function(){
 				$(".startOver").on("click",trivia.question1)
 
 				$(".correct").show();
-				$(".correct").html("Total Wins = "+wins+"<br>Total losses = "+lose+"<br>Total Out of Time = "+lose);
+				$(".correct").html("Total Wins = "+wins+"<br>Total losses = "+lose+"<br>Total Out of Time attempts = "+timeouts);
 				$(".startB").hide();
 				$("#timer").hide();
 				$("#timerW, #timerL, #timerOT").hide();
@@ -382,14 +404,124 @@ $(document).ready(function(){
 		stop: function(){
 			
 			clearInterval(counter);
-			question++;
 			timeouts++;
-			$("#timer").html("<h2>Too slow my friend, you're out of time.</h2>");
+			$("#timerOT").show();
+			
 
-			// "<h2>15 Seconds Remaining</h2>"
+			if( question ===1){
+				
+				$(".question, .answer1, .answer2, .answer4, #timer").hide();
+				};
+
+			if( question ===2){
+				
+				$(".question, .answer1, .answer2, .answer3, #timer").hide();
+				};
+
+			if( question ===3){
+				
+				$(".question, .answer3, .answer2, .answer4, #timer").hide();
+				};
+
+			if( question ===4){
+				
+				$(".question, .answer1, .answer2, .answer4, #timer").hide();
+				};
+
+			if( question ===5){
+				
+				$(".question, .answer1, .answer3, .answer4, #timer").hide();
+				};
+
+			if( question ===6){
+				
+				$(".question, .answer1, .answer2, .answer3, #timer").hide();
+				};
+
+			if( question ===7){
+				
+				$(".question, .answer1, .answer2, .answer4, #timer").hide();
+				};
+
+			if( question ===8){
+				
+				$(".question, .answer1, .answer3, .answer4, #timer").hide();
+				};
+
+			if( question ===9){
+				
+				$(".question, .answer3, .answer2, .answer4, #timer").hide();
+				};
+
+			if( question ===10){
+				
+				$(".question, .answer3, .answer2, .answer1, #timer").hide();
+				};
+
+			setTimeout(trivia.nextQuestion, 1000 * 3);	
 			
 
 			},/*End of Stop F*/
+
+		wrongChoice: function(){
+
+			clearInterval(counter);
+			lose++;
+			$("#timerL").show();
+
+			if( question ===1){
+				
+				$(".question, .answer1, .answer2, .answer4, #timer").hide();
+				};
+
+			if( question ===2){
+				
+				$(".question, .answer1, .answer2, .answer3, #timer").hide();
+				};
+
+			if( question ===3){
+				
+				$(".question, .answer3, .answer2, .answer4, #timer").hide();
+				};
+
+			if( question ===4){
+				
+				$(".question, .answer1, .answer2, .answer4, #timer").hide();
+				};
+
+			if( question ===5){
+				
+				$(".question, .answer1, .answer3, .answer4, #timer").hide();
+				};
+
+			if( question ===6){
+				
+				$(".question, .answer1, .answer2, .answer3, #timer").hide();
+				};
+
+			if( question ===7){
+				
+				$(".question, .answer1, .answer2, .answer4, #timer").hide();
+				};
+
+			if( question ===8){
+				
+				$(".question, .answer1, .answer3, .answer4, #timer").hide();
+				};
+
+			if( question ===9){
+				
+				$(".question, .answer3, .answer2, .answer4, #timer").hide();
+				};
+
+			if( question ===10){
+				
+				$(".question, .answer3, .answer2, .answer1, #timer").hide();
+				};
+
+			setTimeout(trivia.nextQuestion, 1000 * 3);	
+
+		},/*End of wrongChoice F*/
 
 
 		win: function(){
@@ -399,71 +531,71 @@ $(document).ready(function(){
 			if( question ===1){
 				
 				$("#timerW").show();
-				$("#timer").hide();
-				$(".question, .answer1, .answer2, .answer4, #timer").hide();
+				
+				$(".question, .answer1, .answer2, .answer4, #timer, #timerL, #timerOT").hide();
 				};
 
 			if( question ===2){
 				
 				$("#timerW").show();
 				$("#timer").hide();
-				$(".question, .answer1, .answer2, .answer3, #timer").hide();
+				$(".question, .answer1, .answer2, .answer4, #timer, #timerL, #timerOT").hide();
 				};
 
 			if( question ===3){
 				
 				$("#timerW").show();
 				$("#timer").hide();
-				$(".question, .answer3, .answer2, .answer4, #timer").hide();
+				$(".question, .answer1, .answer2, .answer4, #timer, #timerL, #timerOT").hide();
 				};
 
 			if( question ===4){
 				
 				$("#timerW").show();
 				$("#timer").hide();
-				$(".question, .answer1, .answer2, .answer4, #timer").hide();
+				$(".question, .answer1, .answer2, .answer4, #timer, #timerL, #timerOT").hide();				
 				};
 
 			if( question ===5){
 				
 				$("#timerW").show();
 				$("#timer").hide();
-				$(".question, .answer1, .answer3, .answer4, #timer").hide();
+				$(".question, .answer1, .answer2, .answer4, #timer, #timerL, #timerOT").hide();
 				};
 
 			if( question ===6){
 				
 				$("#timerW").show();
 				$("#timer").hide();
-				$(".question, .answer1, .answer2, .answer3, #timer").hide();
+				$(".question, .answer1, .answer2, .answer4, #timer, #timerL, #timerOT").hide();
 				};
 
 			if( question ===7){
 				
 				$("#timerW").show();
 				$("#timer").hide();
-				$(".question, .answer1, .answer2, .answer4, #timer").hide();
+				$(".question, .answer1, .answer2, .answer4, #timer, #timerL, #timerOT").hide();
 				};
 
 			if( question ===8){
 				
 				$("#timerW").show();
 				$("#timer").hide();
-				$(".question, .answer1, .answer3, .answer4, #timer").hide();
+				$(".question, .answer1, .answer2, .answer4, #timer, #timerL, #timerOT").hide();
 				};
 
 			if( question ===9){
 				
 				$("#timerW").show();
 				$("#timer").hide();
-				$(".question, .answer3, .answer2, .answer4, #timer").hide();
+				$(".question, .answer1, .answer2, .answer4, #timer, #timerL, #timerOT").hide();
 				};
 
 			if( question ===10){
 				
 				$("#timerW").show();
 				$("#timer").hide();
-				$(".question, .answer3, .answer2, .answer1, #timer").hide();
+				$(".question, .answer1, .answer2, .answer4, #timer, #timerL, #timerOT").hide();
 				};
 				
 			setTimeout(trivia.nextQuestion, 1000 * 3);	
