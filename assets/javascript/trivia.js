@@ -56,21 +56,21 @@ $(document).ready(function(){
 			$("#timer").html("<h2>15 Seconds Remaining</h2>");
 
 
-			$(".question").html("QUESTION 1 of 10: TEXT");
+			$(".question").html("#1 of 10: 	David Bowie was known to have this unique physical trait");
 
-			$(".answer1").html("Q1 Answer 1");
+			$(".answer1").html("A.  Double jointed");
 
-			$(".answer2").html("Q1 Answer 2");
+			$(".answer2").html("B.  One leg shorter than the other");
 
-			$(".answer3").html("Q1 Answer 3, this is the correct answer");
+			$(".answer3").html("C.  Eyes were 2 different colors");
 			$(".answer3").on("click",trivia.win);
 
-			$(".answer4").html("Q1 Answer 4");
+			$(".answer4").html("D.  He had no sense of smell");
 
 			$(".answer1, .answer2, .answer4").on("click",trivia.wrongChoice);
 			
 			},/*end of question1*/
-		
+
 		
 		question2:function(){
 
@@ -82,17 +82,16 @@ $(document).ready(function(){
 			
 			this.countdown();
 			 
-			$(".question").html("QUESTION TWO TEXT");
+			$(".question").html("#2 of 10: 	Prince once hosted a party and served guests this instead of booze");
 
 
-			$(".answer1").html("Q2 Answer 1");
+			$(".answer1").html("A.	Drugs");
 
-			$(".answer2").html("Q2 Answer 2");
+			$(".answer2").html("B. 	Fruit Salad");
 
-			$(".answer3").html("Q2 Answer 3");
+			$(".answer3").html("C. Soy tacos");
 			
-
-			$(".answer4").html("Q2 Answer 4***");
+			$(".answer4").html("D. 	Breakfast cereal");
 			$(".answer4").on("click", this.win);
 
 			$(".answer1, .answer2, .answer3").on("click",trivia.wrongChoice);
@@ -111,18 +110,18 @@ $(document).ready(function(){
 			$(".question,.answer1,.answer2,.answer3,.answer4").off("click");
 
 			
-			$(".question").html("QUESTION THREE TEXT");
+			$(".question").html("#3 of 10: 	This is the name of an actual Talking Heads cover band");
 
 
-			$(".answer1").html("Q3 Answer 1**");
+			$(".answer1").html("A.  Heartbyrne");
 			$(".answer1").on("click", this.win);
 
-			$(".answer2").html("Q3 Answer 2");
+			$(".answer2").html("B.  Stop Making Sense");
 
-			$(".answer3").html("Q3 Answer 3");
+			$(".answer3").html("C.  Once in a Lifetime");
 			
 
-			$(".answer4").html("Q3 Answer 4");
+			$(".answer4").html("D.  Big Suits on Fire");
 			
 			$(".answer3, .answer2, .answer4").on("click",trivia.wrongChoice);
 			
@@ -143,18 +142,18 @@ $(document).ready(function(){
 
 		
 
-			$(".question").html("QUESTION FOUR TEXT");
+			$(".question").html("#4 of 10: 	Which Neil Young reached #1 on the charts");
 
 
-			$(".answer1").html("Q4 Answer 1");
+			$(".answer1").html("A.  Ohio");
 		
 
-			$(".answer2").html("Q4 Answer 2");
+			$(".answer2").html("B.  Down by the River");
 
-			$(".answer3").html("Q4 Answer 3**");
+			$(".answer3").html("C.  Heart of Gold");
 			$(".answer3").on("click", this.win);
 
-			$(".answer4").html("Q4 Answer 4");
+			$(".answer4").html("D.  Old Man");
 			
 			$(".answer1, .answer2, .answer4").on("click",trivia.wrongChoice);
 
@@ -175,21 +174,22 @@ $(document).ready(function(){
 
 			
 
-			$(".question").html("QUESTION FIVE TEXT");
+			$(".question").html("#5 of 10: 	Dwight Yoakam acted in this movie");
 
 
-			$(".answer1").html("Q5 Answer 1");
+			$(".answer1").html("A.  Wedding Crashers");
 			
 
-			$(".answer2").html("Q5 Answer 2**");
-			$(".answer2").on("click", this.win);
+			$(".answer2").html("B.  Sling Blade");
+			
 
-			$(".answer3").html("Q5 Answer 3");
+			$(".answer3").html("C.  Panic Room");
 		
 
-			$(".answer4").html("Q5 Answer 4");
+			$(".answer4").html("D.  All of them");
+			$(".answer4").on("click", this.win);
 
-			$(".answer1, .answer3, .answer4").on("click",trivia.wrongChoice);
+			$(".answer1, .answer3, .answer2").on("click",trivia.wrongChoice);
 
 			},/*End of question5*/
 
@@ -207,19 +207,19 @@ $(document).ready(function(){
 
 			
 
-			$(".question").html("QUESTION SIX TEXT");
+			$(".question").html("#6 of 10: 	Led Zeppelin's Robert Plant dated this Austinite");
 
 
-			$(".answer1").html("Q6 Answer 1");
+			$(".answer1").html("A.  Sandra Bullock");
 			
 
-			$(".answer2").html("Q6 Answer 2");
+			$(".answer2").html("B.  Emmylou Haris");
 			
 
-			$(".answer3").html("Q6 Answer 3");
+			$(".answer3").html("C.  Toni Price");
 		
 
-			$(".answer4").html("Q6 Answer 4**");
+			$(".answer4").html("D.  Patti Griffin");
 			$(".answer4").on("click", this.win);
 
 			$(".answer1, .answer2, .answer3").on("click",trivia.wrongChoice);
@@ -240,19 +240,19 @@ $(document).ready(function(){
 
 			
 
-			$(".question").html("QUESTION SEVEN TEXT");
+			$(".question").html("#7 of 10: 	Michael Jackson's pet monkey's name was");
 
 
-			$(".answer1").html("Q7 Answer 1");
+			$(".answer1").html("A.  London");
 			
 
-			$(".answer2").html("Q7 Answer 2");
+			$(".answer2").html("B.  Foam Party");
 			
 
-			$(".answer3").html("Q7 Answer 3");
+			$(".answer3").html("C.  Ms. Pretty Pants");
 		
 
-			$(".answer4").html("Q7 Answer 4**");
+			$(".answer4").html("D.  Bubbles");
 			$(".answer4").on("click", this.win);
 
 			$(".answer1, .answer2, .answer3").on("click",trivia.wrongChoice);	
@@ -274,19 +274,19 @@ $(document).ready(function(){
 
 
 
-			$(".question").html("QUESTION EIGHT TEXT");
+			$(".question").html("8 of 10: 	This artist designed an album cover for the Rolling Stones");
 
 
-			$(".answer1").html("Q8 Answer 1");
+			$(".answer1").html("A.  Peter Maxx");
 			
 
-			$(".answer2").html("Q8 Answer 2**");
+			$(".answer2").html("B.  Andy Warhol");
 			$(".answer2").on("click", this.win);
 
-			$(".answer3").html("Q8 Answer 3");
+			$(".answer3").html("C.  Jeff Koons");
 		
 
-			$(".answer4").html("Q8 Answer 4");
+			$(".answer4").html("D.  Jean-Michel Basquiat");
 
 			$(".answer1, .answer3, .answer4").on("click",trivia.wrongChoice);
 			
@@ -307,19 +307,19 @@ $(document).ready(function(){
 			$(".question,.answer1,.answer2,.answer3,.answer4").off("click");
 			
 
-			$(".question").html("QUESTION NINE TEXT");
+			$(".question").html("#9 of 10: 	In the iconic song, Notorious B.I.G., says, 'I love it when you...'");
 
 
-			$(".answer1").html("Q89 Answer 1**");
+			$(".answer1").html("A. '...call me big poppa '");
 			$(".answer1").on("click", this.win);
 
-			$(".answer2").html("Q9 Answer 2");
+			$(".answer2").html("B.  '...call me BLEEEEP '");
 			
 
-			$(".answer3").html("Q9 Answer 3");
+			$(".answer3").html("A.  '...all me a true player '");
 		
 
-			$(".answer4").html("Q9 Answer 4");
+			$(".answer4").html("D.  NSFW");
 
 			$(".answer3, .answer2, .answer4").on("click",trivia.wrongChoice);
 
@@ -339,19 +339,19 @@ $(document).ready(function(){
 			$(".question,.answer1,.answer2,.answer3,.answer4").off("click");
 
 
-			$(".question").html("QUESTION TEN TEXT");
+			$(".question").html("#10 of 10: 	Which is not an Eagles song");
 
 
-			$(".answer1").html("Q10 Answer 1");
+			$(".answer1").html("A.  Best of My Love");
 			
 
-			$(".answer2").html("Q10 Answer 2");
+			$(".answer2").html("B.  Hotel California");
 			
 
-			$(".answer3").html("Q10 Answer 3");
+			$(".answer3").html("C.  New Kid in Town");
 		
 
-			$(".answer4").html("Q10 Answer 4**");
+			$(".answer4").html("D.  Running on Empty");
 			$(".answer4").on("click", this.win);
 
 			$(".answer1, .answer2, .answer3").on("click",trivia.wrongChoice);
@@ -377,11 +377,7 @@ $(document).ready(function(){
 				$(".startB").hide();
 				$("#timer").hide();
 				$("#timerW, #timerL, #timerOT").hide();
-
-				
-
-
-				console.log("wins= "+wins + "Loses= " + lose + "Timeouts= " + timeouts);
+				// console.log("wins= "+wins + "Loses= " + lose + "Timeouts= " + timeouts);
 			},
 
 		countdown:function(){
@@ -491,7 +487,7 @@ $(document).ready(function(){
 
 			if( question ===5){
 				
-				$(".question, .answer1, .answer3, .answer4, #timer").hide();
+				$(".question, .answer1, .answer3, .answer2, #timer").hide();
 				};
 
 			if( question ===6){
@@ -501,7 +497,7 @@ $(document).ready(function(){
 
 			if( question ===7){
 				
-				$(".question, .answer1, .answer2, .answer4, #timer").hide();
+				$(".question, .answer1, .answer2, .answer3, #timer").hide();
 				};
 
 			if( question ===8){
@@ -521,7 +517,7 @@ $(document).ready(function(){
 
 			setTimeout(trivia.nextQuestion, 1000 * 3);	
 
-		},/*End of wrongChoice F*/
+			},/*End of wrongChoice F*/
 
 
 		win: function(){
@@ -539,14 +535,14 @@ $(document).ready(function(){
 				
 				$("#timerW").show();
 				$("#timer").hide();
-				$(".question, .answer1, .answer2, .answer4, #timer, #timerL, #timerOT").hide();
+				$(".question, .answer1, .answer2, .answer3, #timer, #timerL, #timerOT").hide();
 				};
 
 			if( question ===3){
 				
 				$("#timerW").show();
 				$("#timer").hide();
-				$(".question, .answer1, .answer2, .answer4, #timer, #timerL, #timerOT").hide();
+				$(".question, .answer3, .answer2, .answer4, #timer, #timerL, #timerOT").hide();
 				};
 
 			if( question ===4){
@@ -560,42 +556,42 @@ $(document).ready(function(){
 				
 				$("#timerW").show();
 				$("#timer").hide();
-				$(".question, .answer1, .answer2, .answer4, #timer, #timerL, #timerOT").hide();
+				$(".question, .answer1, .answer3, .answer2, #timer, #timerL, #timerOT").hide();
 				};
 
 			if( question ===6){
 				
 				$("#timerW").show();
 				$("#timer").hide();
-				$(".question, .answer1, .answer2, .answer4, #timer, #timerL, #timerOT").hide();
+				$(".question, .answer1, .answer2, .answer3, #timer, #timerL, #timerOT").hide();
 				};
 
 			if( question ===7){
 				
 				$("#timerW").show();
 				$("#timer").hide();
-				$(".question, .answer1, .answer2, .answer4, #timer, #timerL, #timerOT").hide();
+				$(".question, .answer1, .answer2, .answer3, #timer, #timerL, #timerOT").hide();
 				};
 
 			if( question ===8){
 				
 				$("#timerW").show();
 				$("#timer").hide();
-				$(".question, .answer1, .answer2, .answer4, #timer, #timerL, #timerOT").hide();
+				$(".question, .answer1, .answer3, .answer4, #timer, #timerL, #timerOT").hide();
 				};
 
 			if( question ===9){
 				
 				$("#timerW").show();
 				$("#timer").hide();
-				$(".question, .answer1, .answer2, .answer4, #timer, #timerL, #timerOT").hide();
+				$(".question, .answer3, .answer2, .answer4, #timer, #timerL, #timerOT").hide();
 				};
 
 			if( question ===10){
 				
 				$("#timerW").show();
 				$("#timer").hide();
-				$(".question, .answer1, .answer2, .answer4, #timer, #timerL, #timerOT").hide();
+				$(".question, .answer1, .answer2, .answer3, #timer, #timerL, #timerOT").hide();
 				};
 				
 			setTimeout(trivia.nextQuestion, 1000 * 3);	
