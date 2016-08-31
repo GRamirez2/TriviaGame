@@ -52,13 +52,8 @@ $(document).ready(function(){
 			$("#timerW, #timerL, #timerOT, .startB, .startOver, .correct").hide();
 			$("#timer,.question, .answer1, .answer2, .answer3, .answer4").show();
 			$(".answer1, .answer2, .answer3, .answer4").hover(function(){
-				// $(this).append( $("<span>  &#x2713</span>"));
-					 // },function(){
-					 	// $(this).find($("span:last").remove());
-					 // });
-
-				$(this).css("background-color", "#ccffb3");
-					}, function(){$(this).css("background-color", "white");
+				$(this).css("background-color", "#ccffb3");$(this).css("cursor:hand");
+					}, function(){$(this).css("background-color", "white");$(this).css("cursor:pointer");
 			});
 
 					

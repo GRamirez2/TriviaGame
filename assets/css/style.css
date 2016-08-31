@@ -1,5 +1,12 @@
 .image{
-	background-color: gray
+	background-color: #66a3ff;
+	text-align: center;
+	font-weight: bold;
+	color: white;
+	font-size: 30px;
+	letter-spacing: 2px;
+	border-radius: 35px;
+
 }
 
 .question{
