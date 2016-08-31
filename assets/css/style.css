@@ -5,5 +5,26 @@
 .question{
 
 	text-align: center;
+	font-size: 26px;
+	background-color: #f2f2f2;
+	border-style: hidden;
 	
+}
+
+.answer1,
+.answer2,
+.answer3,
+.answer4,
+.correct,
+.incorrect,
+.startOver{
+
+	font-size: 24px;
+	border-style: hidden;
+	text-align: center;
+}
+
+.startOver{
+
+	background-color: #ccffb3;
 }

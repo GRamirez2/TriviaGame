@@ -51,8 +51,17 @@ $(document).ready(function(){
 
 			$("#timerW, #timerL, #timerOT, .startB, .startOver, .correct").hide();
 			$("#timer,.question, .answer1, .answer2, .answer3, .answer4").show();
+			$(".answer1, .answer2, .answer3, .answer4").hover(function(){
+				// $(this).append( $("<span>  &#x2713</span>"));
+					 // },function(){
+					 	// $(this).find($("span:last").remove());
+					 // });
 
-			
+				$(this).css("background-color", "#ccffb3");
+					}, function(){$(this).css("background-color", "white");
+			});
+
+					
 			$("#timer").html("<h2>15 Seconds Remaining</h2>");
 
 
@@ -402,6 +411,7 @@ $(document).ready(function(){
 			clearInterval(counter);
 			timeouts++;
 			$("#timerOT").show();
+			$(".question,.answer1,.answer2,.answer3,.answer4").off("click");
 			
 
 			if( question ===1){
@@ -461,6 +471,7 @@ $(document).ready(function(){
 
 		wrongChoice: function(){
 
+			$(".question,.answer1,.answer2,.answer3,.answer4").off("click");
 			clearInterval(counter);
 			lose++;
 			$("#timerL").show();
@@ -468,6 +479,7 @@ $(document).ready(function(){
 			if( question ===1){
 				
 				$(".question, .answer1, .answer2, .answer4, #timer").hide();
+				
 				};
 
 			if( question ===2){
@@ -517,12 +529,14 @@ $(document).ready(function(){
 
 			setTimeout(trivia.nextQuestion, 1000 * 3);	
 
+
 			},/*End of wrongChoice F*/
 
 
 		win: function(){
 			clearInterval(counter);
 			wins++;
+			$(".question,.answer1,.answer2,.answer3,.answer4").off("click");
 			
 			if( question ===1){
 				
