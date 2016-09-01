@@ -94,7 +94,7 @@ $(document).ready(function(){
 			
 			this.countdown();
 			 
-			$(".question").html("Which Price song is this?<br><sub>#2 of 10</sub>");
+			$(".question").html("Which Prince song is this?<br><sub>#2 of 10</sub>");
 
 
 			$(".answer1").html("Purple Rain");
