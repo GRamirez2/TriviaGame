@@ -23,7 +23,7 @@ $(document).ready(function(){
 			$(".answer2").hide();
 			$(".answer3").hide();
 			$(".answer4").hide();
-			$(".correct").hide();
+			$(".correct").show();
 			$(".incorrect").hide();
 			$(".startOver").hide();
 			$("#timer").hide();
