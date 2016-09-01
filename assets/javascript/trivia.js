@@ -42,6 +42,8 @@ $(document).ready(function(){
 
 			$(".question,.answer1,.answer2,.answer3,.answer4").off("click");
 
+			
+			$("#audioQ1").get(0).play();
 			trivia.countdown();
 			question = 1;
 			wins = 0,
@@ -60,24 +62,30 @@ $(document).ready(function(){
 			$("#timer").html("<h2>15 Seconds Remaining</h2>");
 
 
-			$(".question").html("#1 of 10: 	David Bowie was known to have this unique physical trait");
+			$(".question").html("The muscian who sang this song was known to have this unique physical trait?<br><sub>#1 of 10</sub>");
 
-			$(".answer1").html("A.  Double jointed");
+			$(".answer1").html("He was double jointed");
 
-			$(".answer2").html("B.  One leg shorter than the other");
+			$(".answer2").html("He had one leg shorter than the other");
 
-			$(".answer3").html("C.  Eyes were 2 different colors");
+			$(".answer3").html("His eyes were 2 different colors");
 			$(".answer3").on("click",trivia.win);
 
-			$(".answer4").html("D.  He had no sense of smell");
+			$(".answer4").html("He was an awesome break dancer");
 
 			$(".answer1, .answer2, .answer4").on("click",trivia.wrongChoice);
+
+			$(".answer3,.answer1, .answer2, .answer4").on("click",function(){
+				$("#audioQ1").get(0).pause();
+
+			});
+
 			
 			},/*end of question1*/
 
 		
 		question2:function(){
-
+			$("#audioQ2").get(0).play();
 			$(".question,.answer1,.answer2,.answer3,.answer4").off("click");
 
 			$("#timer").html("<h2>15 Seconds Remaining</h2>")
@@ -86,19 +94,24 @@ $(document).ready(function(){
 			
 			this.countdown();
 			 
-			$(".question").html("#2 of 10: 	Prince once hosted a party and served guests this instead of booze");
+			$(".question").html("Which Price song is this?<br><sub>#2 of 10</sub>");
 
 
-			$(".answer1").html("A.	Drugs");
+			$(".answer1").html("Purple Rain");
 
-			$(".answer2").html("B. 	Fruit Salad");
+			$(".answer2").html("1999");
 
-			$(".answer3").html("C. Soy tacos");
+			$(".answer3").html("Little Red Corvette");
 			
-			$(".answer4").html("D. 	Breakfast cereal");
+			$(".answer4").html("When Doves Cry");
 			$(".answer4").on("click", this.win);
 
 			$(".answer1, .answer2, .answer3").on("click",trivia.wrongChoice);
+
+			$(".answer3,.answer1, .answer2, .answer4").on("click",function(){
+				$("#audioQ2").get(0).pause();
+
+			});
 
 			},/*endo of quesiton 3*/
 
@@ -114,18 +127,18 @@ $(document).ready(function(){
 			$(".question,.answer1,.answer2,.answer3,.answer4").off("click");
 
 			
-			$(".question").html("#3 of 10: 	This is the name of an actual Talking Heads cover band");
+			$(".question").html("This is the name of an actual Talking Heads cover band<br><sub>#3 of 10, no audio</sub>");
 
 
-			$(".answer1").html("A.  Heartbyrne");
+			$(".answer1").html("Heartbyrne");
 			$(".answer1").on("click", this.win);
 
-			$(".answer2").html("B.  Stop Making Sense");
+			$(".answer2").html("Stop Making Sense");
 
-			$(".answer3").html("C.  Once in a Lifetime");
+			$(".answer3").html("Once in a Lifetime");
 			
 
-			$(".answer4").html("D.  Big Suits on Fire");
+			$(".answer4").html("Big Suits on Fire");
 			
 			$(".answer3, .answer2, .answer4").on("click",trivia.wrongChoice);
 			
@@ -134,6 +147,7 @@ $(document).ready(function(){
 
 		question4:function(){
 
+			$("#audioQ4").get(0).play();
 			$("#timer").html("<h2>15 Seconds Remaining</h2>")
 			$("#timerW, #timerL, #timerOT").hide();
 			$("#timer,.question, .answer1, .answer2, .answer3, .answer4").show();
@@ -146,20 +160,24 @@ $(document).ready(function(){
 
 		
 
-			$(".question").html("#4 of 10: 	Which Neil Young reached #1 on the charts");
+			$(".question").html("This Neil Young song reached #1 on the charts?<br><sub>#4 of 10</sub>");
 
 
-			$(".answer1").html("A.  Ohio");
+			$(".answer1").html("Ohio");
 		
 
-			$(".answer2").html("B.  Down by the River");
+			$(".answer2").html("Down by the River");
 
-			$(".answer3").html("C.  Heart of Gold");
+			$(".answer3").html("Heart of Gold");
 			$(".answer3").on("click", this.win);
 
-			$(".answer4").html("D.  Old Man");
+			$(".answer4").html("Old Man");
 			
 			$(".answer1, .answer2, .answer4").on("click",trivia.wrongChoice);
+			$(".answer3,.answer1, .answer2, .answer4").on("click",function(){
+				$("#audioQ4").get(0).pause();
+				});
+
 
 			},/*End of question4*/
 		
@@ -178,19 +196,19 @@ $(document).ready(function(){
 
 			
 
-			$(".question").html("#5 of 10: 	Dwight Yoakam acted in this movie");
+			$(".question").html("Dwight Yoakam acted in this movie<br><sub>#5 of 10, no audio</sub>");
 
 
-			$(".answer1").html("A.  Wedding Crashers");
+			$(".answer1").html("Wedding Crashers");
 			
 
-			$(".answer2").html("B.  Sling Blade");
+			$(".answer2").html("Sling Blade");
 			
 
-			$(".answer3").html("C.  Panic Room");
+			$(".answer3").html("Panic Room");
 		
 
-			$(".answer4").html("D.  All of them");
+			$(".answer4").html("All of them");
 			$(".answer4").on("click", this.win);
 
 			$(".answer1, .answer3, .answer2").on("click",trivia.wrongChoice);
@@ -211,19 +229,19 @@ $(document).ready(function(){
 
 			
 
-			$(".question").html("#6 of 10: 	Led Zeppelin's Robert Plant dated this Austinite");
+			$(".question").html("Led Zeppelin's Robert Plant dated this Austinite<br><sub>#6 of 10, no audio</sub>");
 
 
-			$(".answer1").html("A.  Sandra Bullock");
+			$(".answer1").html("Sandra Bullock");
 			
 
-			$(".answer2").html("B.  Emmylou Haris");
+			$(".answer2").html("Emmylou Haris");
 			
 
-			$(".answer3").html("C.  Toni Price");
+			$(".answer3").html("Toni Price");
 		
 
-			$(".answer4").html("D.  Patti Griffin");
+			$(".answer4").html("Patti Griffin");
 			$(".answer4").on("click", this.win);
 
 			$(".answer1, .answer2, .answer3").on("click",trivia.wrongChoice);
@@ -234,7 +252,7 @@ $(document).ready(function(){
 
 			$("#timer").html("<h2>15 Seconds Remaining</h2>")
 			$("#timerW, #timerL, #timerOT").hide();
-			$("#timer,.question, .answer1, .answer2, .answer3, .answer4").show();
+			$("#timer,.question, .answer1, .answer2, .answer3, .answer4, .image").show();
 
 
 			this.countdown();
@@ -244,19 +262,19 @@ $(document).ready(function(){
 
 			
 
-			$(".question").html("#7 of 10: 	Michael Jackson's pet monkey's name was");
+			$(".question").html("Michael Jackson's pet monkey's name was?<br><sub>#7 of 10, no audio</sub>");
 
 
-			$(".answer1").html("A.  London");
+			$(".answer1").html("London");
 			
 
-			$(".answer2").html("B.  Foam Party");
+			$(".answer2").html("Foam Party");
 			
 
-			$(".answer3").html("C.  Ms. Pretty Pants");
+			$(".answer3").html("Ms. Pretty Pants");
 		
 
-			$(".answer4").html("D.  Bubbles");
+			$(".answer4").html("Bubbles");
 			$(".answer4").on("click", this.win);
 
 			$(".answer1, .answer2, .answer3").on("click",trivia.wrongChoice);	
@@ -266,6 +284,7 @@ $(document).ready(function(){
 
 		question8:function(){
 
+			$(".image").hide();
 			$("#timer").html("<h2>15 Seconds Remaining</h2>")
 			$("#timerW, #timerL, #timerOT").hide();
 			$("#timer,.question, .answer1, .answer2, .answer3, .answer4").show();
@@ -278,19 +297,19 @@ $(document).ready(function(){
 
 
 
-			$(".question").html("8 of 10: 	This artist designed an album cover for the Rolling Stones");
+			$(".question").html("This artist designed an album cover for the Rolling Stones<br><sub>#8 of 10, no audio</sub>");
 
 
-			$(".answer1").html("A.  Peter Maxx");
+			$(".answer1").html("Peter Maxx");
 			
 
-			$(".answer2").html("B.  Andy Warhol");
+			$(".answer2").html("Andy Warhol");
 			$(".answer2").on("click", this.win);
 
-			$(".answer3").html("C.  Jeff Koons");
+			$(".answer3").html("Jeff Koons");
 		
 
-			$(".answer4").html("D.  Jean-Michel Basquiat");
+			$(".answer4").html("Jean-Michel Basquiat");
 
 			$(".answer1, .answer3, .answer4").on("click",trivia.wrongChoice);
 			
@@ -300,6 +319,7 @@ $(document).ready(function(){
 
 		question9:function(){
 
+			$("#audioQ9").get(0).play();
 			$("#timer").html("<h2>15 Seconds Remaining</h2>");
 			$("#timerW, #timerL, #timerOT").hide();
 			$("#timer,.question, .answer1, .answer2, .answer3, .answer4").show();
@@ -311,27 +331,33 @@ $(document).ready(function(){
 			$(".question,.answer1,.answer2,.answer3,.answer4").off("click");
 			
 
-			$(".question").html("#9 of 10: 	In the iconic song, Notorious B.I.G., says, 'I love it when you...'");
+			$(".question").html("The chorus to this song is?<br><sub>#9 of 10</sub>");
 
 
-			$(".answer1").html("A. '...call me big poppa '");
+			$(".answer1").html("'I love it when you call me Big Pop-pa '");
 			$(".answer1").on("click", this.win);
 
-			$(".answer2").html("B.  '...call me BLEEEEP '");
+			$(".answer2").html("'...call me BLEEEEP '");
 			
 
-			$(".answer3").html("A.  '...all me a true player '");
+			$(".answer3").html("'Throw your hands in the air, if youse... '");
 		
 
-			$(".answer4").html("D.  NSFW");
+			$(".answer4").html("The Notorious B.I.G.");
 
 			$(".answer3, .answer2, .answer4").on("click",trivia.wrongChoice);
+
+			$(".answer3,.answer1, .answer2, .answer4").on("click",function(){
+				$("#audioQ9").get(0).pause();
+
+			});
 
 			},/*END OF QUESITON 9*/
 
 
 		question10:function(){
 
+			$("#audioQ10").get(0).play();
 			$("#timer").html("<h2>15 Seconds Remaining</h2>");
 			$("#timerW, #timerL, #timerOT").hide();
 			$("#timer,.question, .answer1, .answer2, .answer3, .answer4").show();
@@ -343,22 +369,27 @@ $(document).ready(function(){
 			$(".question,.answer1,.answer2,.answer3,.answer4").off("click");
 
 
-			$(".question").html("#10 of 10: 	Which is not an Eagles song");
+			$(".question").html("Which song by the Eagles is this?<br><sub>Final question</sub>");
 
 
-			$(".answer1").html("A.  Best of My Love");
+			$(".answer1").html("Best of My Love");
 			
 
-			$(".answer2").html("B.  Hotel California");
+			$(".answer2").html("Hotel California");
 			
 
-			$(".answer3").html("C.  New Kid in Town");
+			$(".answer3").html("New Kid in Town");
 		
 
-			$(".answer4").html("D.  Running on Empty");
+			$(".answer4").html("Desperado");
 			$(".answer4").on("click", this.win);
 
 			$(".answer1, .answer2, .answer3").on("click",trivia.wrongChoice);
+
+			$(".answer3,.answer1, .answer2, .answer4").on("click",function(){
+				$("#audioQ10").get(0).pause();
+
+			});
 
 			},/*End of question 10*/
 

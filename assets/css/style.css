@@ -1,13 +1,13 @@
-.image{
-	background-color: #66a3ff;
-	text-align: center;
-	font-weight: bold;
-	color: white;
-	font-size: 30px;
-	letter-spacing: 2px;
-	border-radius: 35px;
+/*.image{*/
+	/*background-color: #66a3ff;*/
+	/*text-align: center;*/
+	/*font-weight: bold;*/
+	/*color: white;*/
+	/*font-size: 30px;*/
+	/*letter-spacing: 2px;*/
+	/*border-radius: 35px;*/
 
-}
+/*}*/
 
 .question{
 
@@ -34,4 +34,12 @@
 .startOver{
 
 	background-color: #ccffb3;
+}
+
+img {
+
+	display: block;
+	margin: 0 auto;
+	width: 200px;
+	border-style: hidden;
 }
