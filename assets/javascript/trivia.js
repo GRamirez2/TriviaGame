@@ -31,13 +31,13 @@ $(document).ready(function(){
 			$("#timerL").hide();
 			$("#timerOT").hide();
 			$(".startB").show();
-			trivia.countdown();
+			// trivia.countdown();
 
 			$(".startB").on("click", this.question1);
 			// $(".startB").on("click", this.question1.bind(this));
-			},/*End of init method*/
+						},/*End of init method*/
 
-			// timer:function(),
+			
 
 		question1:function(){
 
@@ -45,12 +45,14 @@ $(document).ready(function(){
 
 			
 			$("#audioQ1").get(0).play();
-			// trivia.countdown();
+			trivia.countdown();
 			question = 1;
 			wins = 0,
 			lose = 0,
 			clock = 15,
 			timeouts = 0;
+			console.log(counter);
+			
 
 			$("#timerW, #timerL, #timerOT, .startB, .startOver, .correct").hide();
 			$("#timer,.question, .answer1, .answer2, .answer3, .answer4").show();
@@ -80,13 +82,13 @@ $(document).ready(function(){
 				$("#audioQ1").get(0).pause();
 
 			});
-			console.log(timer)
+			
 			
 			},/*end of question1*/
 
 		
 		question2:function(){
-
+			console.log(counter)
 			clock = 15;
 			$("#audioQ2").get(0).play();
 			$(".question,.answer1,.answer2,.answer3,.answer4").off("click");
@@ -408,7 +410,7 @@ $(document).ready(function(){
 				$(".answer3").hide();
 				$(".answer4").hide();
 				$(".startOver").show();
-				$(".startOver").on("click",trivia.init)
+				$(".startOver").on("click",trivia.question1)
 
 				$(".correct").show();
 				$(".correct").html("Total Wins = "+wins+"<br>Total losses = "+lose+"<br>Total Out of Time attempts = "+timeouts);
@@ -416,11 +418,12 @@ $(document).ready(function(){
 				$("#timer").hide();
 				$("#timerW, #timerL, #timerOT").hide();
 				// console.log("wins= "+wins + "Loses= " + lose + "Timeouts= " + timeouts);
+				console.log(counter);
 			},
 
 		countdown:function(){
 
-			counter = setInterval(this.timer, 1000);
+			counter = setInterval(trivia.timer, 1000);
 			},/*End of countdown F*/
 
 		timer: function(){
